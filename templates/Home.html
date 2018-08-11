@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File upload</title>
+    <link rel="stylesheet" type="text/css" href ="{{ url_for('static', filename='work1style.css') }}">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='home.js') }}"></script>
+</head>
+<body>
+<h1> File Upload </h1>
+<label> File </label>
+<form enctype="multipart/form-data" action="/uploads" method="POST">
+<input type="file" name="file" id="upfile" />
+    </form>
+       <div>
+           <input type="button" id="submit" value="submit" />
+           <input type="button" id="reset" value="reset"  />
+       </div>
+</body>
+</html>
